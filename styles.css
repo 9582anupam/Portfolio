@@ -176,7 +176,8 @@ a
     color: white;
     box-shadow: 0px 0px 5px red;
     position: relative;
-    z-index: 1;;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .btn-pink::before
@@ -622,7 +623,7 @@ button
     position: relative;
     display: flex;
     padding: 5rem;
-    margin: 10rem auto;
+    margin: 5rem auto;
     gap: 30px;
 }
 
@@ -639,11 +640,14 @@ button
 
 .skill-container-right
 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
     position: relative;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows */
+    gap: 2rem; /* Gap between grid items */
+    width: 50%;
+    height: 50%;
+    padding-top: 10rem;
 }
 
 .skill-faded-text
@@ -652,7 +656,7 @@ button
     font-size: 15em;
     font-weight: bold;
     color: rgb(231,231,231);
-    bottom: -36.7%;
+    bottom: -31.4%;
     right: 4%;
     user-select: none;
     overflow-y: hidden;
@@ -661,6 +665,17 @@ button
 
 
 
+.skill-container-right img
+{
+    width: 40%;
+    transition: all 0.5s;
+    padding: 2%;
+}
+
+.skill-container-right img:hover
+{
+    transform: scale(1.2);
+}
 
 
 .blob-style
@@ -688,17 +703,6 @@ button
 
 
 
-.skill-container-right img
-{
-    width: 15%;
-    transition: all 0.5s;
-    padding: 2%;
-}
-
-.skill-container-right img:hover
-{
-    transform: scale(1.2);
-}
 
 
 .skill-heading
@@ -720,6 +724,14 @@ button
     margin-top: 1rem;
     width: 85%;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-subheading li
+{
+    padding-top: 0.4rem;
 }
 
 .skill-subheading p
@@ -734,6 +746,7 @@ button
 {
     width: 100%;
     background-color: rgb(231,231,231);
+    margin-top: 12rem;
 }
 
 
