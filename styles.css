@@ -903,10 +903,30 @@ footer
     gap: 1rem;
 }
 
+.desktop-view
+{
+    display: none;
+}
 
 
-
-
+@media screen and (max-width: 1000px)
+{
+    .desktop-view
+    {
+        /* display: block; */
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+    }
+    
+    .wrapper
+    {
+        display: none;
+    }
+}
 
 
 
