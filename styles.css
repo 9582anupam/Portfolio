@@ -175,7 +175,7 @@ a
     background-color: #e84949;
     width: fit-content;
     color: white;
-    padding: 0.8rem 2.3rem;
+    padding: 0.5rem 1.7rem;
     box-shadow: 5px 5px 7px 0px #0000003f;
     font-size: 18px;
     cursor: pointer;
@@ -184,6 +184,7 @@ a
     border: solid 3px transparent;
     position: relative;
     z-index: 1;
+    border-radius: 3px;
     
   }
   .btn-pink::before {
@@ -411,6 +412,7 @@ button
     /* display: flex; */
     text-align: center;
     padding-top: 30px;
+    font-weight: bold;
 
 
 }
@@ -790,6 +792,14 @@ button
     gap: 30px;
     margin: 2rem 5rem;
 }
+.formfields
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
 .formfield-container
 {
     width: 100%;
@@ -920,6 +930,8 @@ footer
         text-align: center;
         padding-top: -1rem;
         padding-bottom: 3rem;
+        margin-bottom: 0;
+        padding-bottom: 2rem;
     }
     .hero-section-description
     {
@@ -943,6 +955,7 @@ footer
     {
         margin-top: -6em;
         scale: 0.7;
+        margin-bottom: 0;
     }
   }
 
@@ -1019,6 +1032,11 @@ footer
     .project-card:hover .project-content
     {
         scale: 0.55;
+    }
+    .projects
+    {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
 
@@ -1116,15 +1134,40 @@ footer
         margin: 0;
         align-items: center;
     }
+    .formfields
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+    }
     .formfield-container
     {
         display: flex;
         align-items: center;
-        width: 90%;
+        justify-content: center;
+        width: 100%;
     }
     .formfield
     {
         width: 90%;
+    }
+    .formfield-textarea
+    {
+        height: 100px;
+    }
+    input::placeholder, textarea::placeholder
+    {
+        font-size: 11px;
+    }
+    .contactus-heading-container
+    {
+        width: 100%;
+    }
+    .contactus-form-container
+    {
+        width: 100%;
     }
 }
 
@@ -1133,6 +1176,14 @@ footer
     footer
     {
         padding: 0.5rem;
+    }
+    .link-wrapper div a
+    {
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: start;
+        font-family: "Be Vietnam Pro", sans-serif;
     }
     .footer-wrapper
     {
