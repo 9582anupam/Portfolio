@@ -1,3 +1,4 @@
 # Portfolio
-This Portfolio is not responsive. View in desktop only.
+This is a portfolio website
+
 [Deployment link](https://9582anupam-portfolio.netlify.app/)
