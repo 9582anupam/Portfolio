@@ -1202,12 +1202,15 @@ footer
 
 .pdf-viewer
 {
-    width: 100vw; 
+    width: 50vw; 
     height: 100vh; 
-    scrollbar-width: 0;
+    overflow: hidden;
+    
 }
 
 .resume-body
 {
+    display: flex;
+    justify-content: center;
     overflow: hidden;
 }
