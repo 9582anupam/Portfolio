@@ -36,17 +36,31 @@
     padding-top: 1rem;
 }
 
-.logo
-{
-    height: 100px;
-    width: 100px;
-}
 
 .logo-container
 {
-    display: flex;
-    align-items: center;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 2rem;
+}
+
+.a-text
+{
+    font-size: 100px; 
+    margin: 0; 
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.nupam-text
+{
+    font-size: 64px; 
+    margin: 0; 
+    position: relative; 
+    bottom: 0;
+    top: 1.9rem; 
+    line-height: 70px;
 }
 
 .nav-item
@@ -56,14 +70,7 @@
     padding: 0 4em;
 }
 
-.logo-text
-{
-    /* margin-left: -1.2rem; */
-    font-size: 50px;
-    position: absolute;
-    left: 84%;
-    top: 24%;
-}
+
 
 
 .nav-item div
