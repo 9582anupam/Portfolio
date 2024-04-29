@@ -937,6 +937,11 @@ footer
     {
       display: none;
     }
+    .navbar
+    {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
