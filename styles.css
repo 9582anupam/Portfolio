@@ -102,6 +102,12 @@ a
     padding-bottom: 8rem;
 }
 
+.hero-btn
+{
+    display: flex;
+    gap: 2rem;
+}
+
 #btn-bottom
 {
     display: none;
@@ -1194,4 +1200,19 @@ footer
 }
 
 
+.resume-btn
+{
 
+}
+
+.pdf-viewer
+{
+    width: 100vw; 
+    height: 100vh; 
+    scrollbar-width: 0;
+}
+
+.resume-body
+{
+    overflow: hidden;
+}
