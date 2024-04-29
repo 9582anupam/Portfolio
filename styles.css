@@ -96,15 +96,22 @@ a
     justify-content: center;
     align-items: center;
 
-    gap: 5rem;
     margin: 4rem auto;
     padding: 0 1rem;
     padding-bottom: 8rem;
 }
 
-.hero-btn
+.hero-btn-top
 {
     display: flex;
+    gap: 2rem;
+}
+
+.hero-btn-bottom
+{
+    /* padding-top: 2rem; */
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -165,6 +172,7 @@ a
 
 .hero-section-description
 {
+    padding-bottom: 5rem;
     margin-top: 1rem;
     width: 70%;
     font-weight: 500;
@@ -954,7 +962,7 @@ footer
     }
     #btn-bottom
     {
-        margin-top: -7rem;
+        /* margin-top: -6rem; */
         display: block;
     }
     .hero-section-right
