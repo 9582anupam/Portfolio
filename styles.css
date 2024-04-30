@@ -426,17 +426,6 @@ button
 }
 
 
-.project-heading
-{
-    color: #e84949;
-    font-size: 90px;
-    /* display: flex; */
-    text-align: center;
-    padding-top: 30px;
-    font-weight: bold;
-
-
-}
 
 
 .navbar, .hero-section
@@ -529,6 +518,14 @@ button
     top: -45px;
 }
 
+.page-header
+{
+    padding-top: 30px;
+    color: #e84949;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+}
 
 .project-content
 {
@@ -541,6 +538,7 @@ button
     z-index: 3;
     gap: 1em;
     transition: all 0.4s;
+    width: 60%;
 }
 
 .project-content-left
@@ -550,9 +548,13 @@ button
 
 .project-content-right
 {
-    right: 10%;
+    right: 0;
 }
-
+.project-skills-container h2
+{
+    display: inline-block !important;
+    width: auto !important;
+}
 .project-skills-container
 {
     width: 60%;
@@ -566,11 +568,12 @@ button
     width: 40px;
 }
 
-.project-name-heading
+.project-heading
 {
     font-size: 50px;
     font-weight: bold;
     line-height: 3rem;
+    width: fit-content;
 }
 
 .project-subheading
@@ -586,6 +589,7 @@ button
     display: flex;
     gap: 0.9rem;
     align-items: center;
+    width: fit-content;
 }
 
 .icon
@@ -618,24 +622,24 @@ button
 
 #project1
 {
-    background-image: url(images/30_Project1.png);
+    background-image: url(images/razorpay.png);
 }
 
 #project2
 {
     margin-left: 120px;
-    background-image: url(images/28_Project2.png);
+    background-image: url(images/portfolio.png);
 }
 
 #project3
 {
-    background-image: url(images/40_Project3.png);
+    background-image: url(images/tasty-trek.png);
 }
 
 #project4
 {
     margin-left: 120px;
-    background-image: url(images/26_Project4.png);
+    background-image: url(images/brand-page.png);
 }
 
 
@@ -986,16 +990,20 @@ footer
   }
 
 
-
+@media (max-width: 720px)
+{
+    .project-content
+    {
+        scale: 0.5;
+    }
+}
 
 @media (max-width:1300px)
 {
     .project-heading
     {
-        padding-top: 30px;
-        color: #e84949;
-        text-align: center;
         font-size: 40px;
+        width: 100%;
     }
     .project-container
     {
@@ -1015,20 +1023,24 @@ footer
     }
     .project-content
     {
-        scale: 0.5;
-        bottom: 0;
+        /* scale: 0.5; */
+        bottom: 100%;
         left: 0;
-        right: 0;
+        /* right: 0; */
         top: 0;
+        width: 100%;
     }
     .project-content-left
     {
         left: 0;
     }
-    .project-name-heading
+    .page-header
     {
+        padding-top: 30px;
+        color: #e84949;
+        text-align: center;
         font-size: 40px;
-        width: 100%;
+        font-weight: bold;
     }
     .project-subheading
     {
