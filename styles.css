@@ -952,6 +952,10 @@ footer
 
 @media (max-width:1300px)
 {
+    .nupam-text
+    {
+        top: 1.83rem;
+    }
     .hero-section
     {
         flex-direction: column;
