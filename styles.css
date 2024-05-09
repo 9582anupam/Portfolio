@@ -926,6 +926,17 @@ footer
     gap: 1rem;
 }
 
+.made-by
+{
+    text-align: center;
+    padding: 0.3rem;
+    background-color: rgb(232, 73, 73);
+    color: white;
+    user-select: none;
+}
+
+
+
 
 @media (max-width:1500px)
 {
