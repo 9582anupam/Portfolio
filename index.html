@@ -6,11 +6,12 @@
         <title>Portfolio Website</title>
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="main.css" />
+        <script defer src="index.js"> </script>
     </head>
     <body>
         <div class="wrapper">
             <div class="container">
-                <div class="navbar">
+                <div class="navbar hide">
                     <div class="logo-container">
                         <p class="a-text">A</p>
                         <p class="nupam-text">nupam</p>
@@ -29,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="hero-section">
+                <div class="hero-section hide">
                     <div class="faded-text">ANUPAM</div>
 
                     <div class="hero-section-left">
@@ -84,7 +85,7 @@
                     <div class="page-header">Projects</div>
 
                     <div class="project-container">
-                        <div class="project-card" id="project1">
+                        <div class="project-card  right" id="project1">
                             <div class="project-number project-number-right">
                                 <p>01</p>
                             </div>
@@ -136,7 +137,7 @@
                             </div>
                         </div>
 
-                        <div class="project-card" id="project2">
+                        <div class="project-card  left" id="project2">
                             <div class="project-number project-number-left">
                                 02
                             </div>
@@ -177,7 +178,7 @@
                             </div>
                         </div>
 
-                        <div class="project-card" id="project3">
+                        <div class="project-card  right" id="project3">
                             <div class="project-number project-number-right">
                                 <p>03</p>
                             </div>
@@ -233,7 +234,7 @@
                             </div>
                         </div>
 
-                        <div class="project-card" id="project4">
+                        <div class="project-card  left" id="project4">
                             <div class="project-number project-number-left">
                                 04
                             </div>
@@ -289,7 +290,7 @@
                     </div>
                 </div>
 
-                <div class="skills-container container" id="skills">
+                <div class="skills-container container hide" id="skills">
                     <div class="skill-faded-text">Skills</div>
 
                     <div class="skill-container-left">
@@ -408,68 +409,68 @@
                     </div>
                 </div>
 
-                    <div id="contact-me" class="contactus-container">
-                        <div class="contactus-heading-container">
-                            <h1 class="contactus-heading">Contact Me</h1>
-                            <h3 class="contactus-sub-heading">
-                                Questions, thoughts, or just want to say hello?
-                            </h3>
-                        </div>
-                            <div class="contactus-form-container">
-                                <form
-                                    class="form"
-                                    action="https://formspree.io/f/xvoelprp"
-                                    method="post">
-                                    <div class="formfields">
-                                        <div class="formfield-container">
-                                        <input
-                                                class="formfield"
-                                                type="text"
-                                                name="name"
-                                                id=""
-                                                placeholder="Enter your name" />
-                                        </div>
-                                        <div class="formfield-container">
-                                            <input
-                                                class="formfield"
-                                                type="email"
-                                                name="email"
-                                                id=""
-                                                placeholder="Enter your email address" />
-                                        </div>
-                                        <div class="formfield-container">
-                                            <input
-                                                class="formfield"
-                                                type="text"
-                                                name="subject"
-                                                id=""
-                                                placeholder="Enter your subject" />
-                                        </div>
-                                        <div class="formfield-container">
-                                            <textarea
-                                                name="message"
-                                                id=""
-                                                cols="30"
-                                                rows="10"
-                                                class="formfield formfield-textarea"
-                                                placeholder="Enter your message"></textarea>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <button
-                                            type="submit"
-                                            class="btn-pink"
-                                            id="submit-btn">
-                                            Send Message<i
-                                                class="submit-icon fa-solid fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+                <div id="contact-me" class="contactus-container hide">
+                    <div class="contactus-heading-container">
+                        <h1 class="contactus-heading">Contact Me</h1>
+                        <h3 class="contactus-sub-heading">
+                            Questions, thoughts, or just want to say hello?
+                        </h3>
                     </div>
+                        <div class="contactus-form-container">
+                            <form
+                                class="form"
+                                action="https://formspree.io/f/xvoelprp"
+                                method="post">
+                                <div class="formfields">
+                                    <div class="formfield-container">
+                                    <input
+                                            class="formfield"
+                                            type="text"
+                                            name="name"
+                                            id=""
+                                            placeholder="Enter your name" />
+                                    </div>
+                                    <div class="formfield-container">
+                                        <input
+                                            class="formfield"
+                                            type="email"
+                                            name="email"
+                                            id=""
+                                            placeholder="Enter your email address" />
+                                    </div>
+                                    <div class="formfield-container">
+                                        <input
+                                            class="formfield"
+                                            type="text"
+                                            name="subject"
+                                            id=""
+                                            placeholder="Enter your subject" />
+                                    </div>
+                                    <div class="formfield-container">
+                                        <textarea
+                                            name="message"
+                                            id=""
+                                            cols="30"
+                                            rows="10"
+                                            class="formfield formfield-textarea"
+                                            placeholder="Enter your message"></textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button
+                                        type="submit"
+                                        class="btn-pink"
+                                        id="submit-btn">
+                                        Send Message<i
+                                            class="submit-icon fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
 
                 <footer>
-                    <div class="container">
+                    <div class="container hide">
                         <div class="footer-wrapper">
                             <div class="footer-faded-text">Anupam</div>
 
@@ -501,7 +502,7 @@
                     </div>
                 </footer>
             </div>
-            <div class="made-by">
+            <div class="made-by hide">
                 made by Anupam
             </div>
         </div>
