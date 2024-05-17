@@ -1025,7 +1025,7 @@ footer
     .project-content, .btn-grp
     {
         gap: 0;
-        padding: 0.5em;
+        padding: 0.4em 1em 1em 1em; 
     }
     .project-card
     {
@@ -1117,10 +1117,6 @@ footer
     .project-card:hover .project-number
     {
         display: none;
-    }
-    .project-card:hover .project-content
-    {
-        scale: 0.55;
     }
     .projects
     {
