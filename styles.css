@@ -443,13 +443,14 @@ button
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 120px;
 
 }
 
 .project-card
 {
-    width: 90%;
+    width: 90vw;;
     height: 550px;
     background-size: cover;
     position: relative;
@@ -1006,11 +1007,48 @@ footer
   }
 
 
-@media (max-width: 720px)
+@media (max-width: 768px)
 {
-    .project-content
+    .project-content img,button, a
     {
-        scale: 0.5;
+        /* transform: scaley(50%); */
+        scale: 70%;
+    }
+    
+    .project-content h2
+    {
+        /* transform: scaley(50%); */
+        /* scale: 70%; */
+        font-size: 30px;
+    }
+
+    .project-content, .btn-grp
+    {
+        gap: 0;
+        padding: 0.5em;
+    }
+    .project-card
+    {
+        height: 240px;
+    }
+    
+}
+
+
+@media (max-width:1300px) and (min-width: 768px)
+{
+    .project-card
+    {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1300px)
+{
+    .project-card
+    {
+        width: 90%;
     }
 }
 
@@ -1019,7 +1057,7 @@ footer
     .project-heading
     {
         font-size: 40px;
-        width: 100%;
+        /* width: 100%; */
     }
     .project-container
     {
@@ -1027,15 +1065,12 @@ footer
         margin: 10px;
         gap: 60px;
     }
-    .project-card
-    {
-        width: 100%;
-        height: 300px;
-    }
+
     .project-card
     {
         background-size: cover;
         background-position: center;
+        overflow-wrap: break-word;
     }
     .project-content
     {
