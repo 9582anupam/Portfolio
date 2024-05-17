@@ -1004,7 +1004,19 @@ footer
         scale: 0.7;
         margin-bottom: 0;
     }
-  }
+    .hero-btn-bottom
+    {
+        gap: 1rem;
+    }
+}
+
+@media (max-width:768px)
+{
+    .hero-btn-bottom
+    {
+        gap: 0;
+    }
+}
 
 
 @media (max-width: 768px)
