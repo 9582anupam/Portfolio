@@ -624,24 +624,18 @@ button
 
 #project1
 {
-    background-image: url(images/razorpay.png);
+    background-image: url(images/scheme-seva.png);
 }
 
 #project2
 {
     margin-left: 120px;
-    background-image: url(images/portfolio.png);
+    background-image: url(images/sticky-note.png);
 }
 
 #project3
 {
-    background-image: url(images/tasty-trek.png);
-}
-
-#project4
-{
-    margin-left: 120px;
-    background-image: url(images/brand-page.png);
+    background-image: url(images/bite-box.png);
 }
 
 
@@ -684,8 +678,8 @@ button
 
 .skills-logo
 {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     transition: all 0.5s;
     
 }
@@ -1170,8 +1164,8 @@ footer
     }
     .skills-logo
     {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
     .skill-faded-text
     {
