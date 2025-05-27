@@ -81,16 +81,16 @@ const newUser = async (req, res) => {
         const { ip } = req.body;
         
         // Check if user with this IP already exists
-        // const existingUser = await User.findOne({ ip: ip });
+        const existingUser = await User.findOne({ ip: ip });
         
-        // if (existingUser) {
-        //     return res.status(200).json({
-        //         message: "user already exists with this IP",
-        //         success: true,
-        //         status: 200,
-        //         isExisting: true,
-        //     });
-        // }
+        if (existingUser) {
+            return res.status(200).json({
+                message: "user already exists with this IP",
+                success: true,
+                status: 200,
+                isExisting: true,
+            });
+        }
         
         // If IP doesn't exist, create new user
         const ipDet = await getIpDetails(ip);
