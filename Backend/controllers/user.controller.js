@@ -20,8 +20,25 @@ export const getIpDetails = async (ip) => {
     try {
         const ipKey = process.env.IP_Key;
         const response = await axios.get(`https://api.ip2location.io/?key=${ipKey}&ip=${ip}`);
-        console.log(response.data);
-        return response.data;
+        
+        // Manually create object from response.data with only specified fields
+        const ipDetails = {
+            ip: response.data.ip || null,
+            country_code: response.data.country_code || null,
+            country_name: response.data.country_name || null,
+            region_name: response.data.region_name || null,
+            city_name: response.data.city_name || null,
+            latitude: response.data.latitude || null,
+            longitude: response.data.longitude || null,
+            zip_code: response.data.zip_code || null,
+            time_zone: response.data.time_zone || null,
+            asn: response.data.asn || null,
+            as: response.data.as || null,
+            is_proxy: response.data.is_proxy || false
+        };
+        
+        console.log("Processed IP Details:", ipDetails);
+        return ipDetails;
     } catch (error) {
         console.error(error);
         return null;
@@ -36,6 +53,7 @@ const putMessage = async (req, res) => {
         const dateTime = now.toLocaleString(); // Local date and time
         // const ip = await getUserIpAddress();
         const ipDet = await getIpDetails(ip);
+        console.log("ipDet here", ipDet);
         const data = new Message({ name, email, subject, message, dateTime, ip, ipDet });
         await data.save();
         await sendEmail(name, email, subject, message, ipDet);
@@ -63,16 +81,16 @@ const newUser = async (req, res) => {
         const { ip } = req.body;
         
         // Check if user with this IP already exists
-        const existingUser = await User.findOne({ ip: ip });
+        // const existingUser = await User.findOne({ ip: ip });
         
-        if (existingUser) {
-            return res.status(200).json({
-                message: "user already exists with this IP",
-                success: true,
-                status: 200,
-                isExisting: true,
-            });
-        }
+        // if (existingUser) {
+        //     return res.status(200).json({
+        //         message: "user already exists with this IP",
+        //         success: true,
+        //         status: 200,
+        //         isExisting: true,
+        //     });
+        // }
         
         // If IP doesn't exist, create new user
         const ipDet = await getIpDetails(ip);
