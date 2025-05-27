@@ -17,7 +17,8 @@ import axios from 'axios';
 
 export const getIpDetails = async (ip) => {
     try {
-        const response = await axios.get(`http://ip-api.com/json/${ip}`);
+        const ipKey = process.env.IP_Key;
+        const response = await axios.get(`https://api.ip2location.io/?key=${ipKey}&ip=${ip}`);
         console.log(response.data);
         return response.data;
     } catch (error) {
