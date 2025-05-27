@@ -4,16 +4,16 @@ import jwt from "jsonwebtoken";
 import { sendEmail } from "../services/email.js";
 import axios from 'axios';
 
-export const getUserIpAddress = async () => {
-    try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        return data.ip;
-    } catch (error) {
-        console.error('Error fetching IP address:', error);
-        return null;
-    }
-};
+// export const getUserIpAddress = async () => {
+//     try {
+//         const response = await fetch('https://api.ipify.org?format=json');
+//         const data = await response.json();
+//         return data.ip;
+//     } catch (error) {
+//         console.error('Error fetching IP address:', error);
+//         return null;
+//     }
+// };
 
 export const getIpDetails = async (ip) => {
     try {
@@ -29,10 +29,10 @@ export const getIpDetails = async (ip) => {
 // add a new message
 const putMessage = async (req, res) => {
     try {
-        const { name, email, subject, message } = req.body;
+        const { name, email, subject, message, ip } = req.body;
         const now = new Date();
         const dateTime = now.toLocaleString(); // Local date and time
-        const ip = await getUserIpAddress();
+        // const ip = await getUserIpAddress();
         const ipDet = await getIpDetails(ip);
         const data = new User({ name, email, subject, message, dateTime, ip, ipDet });
         await data.save();

@@ -402,6 +402,9 @@ if (contactForm) {
             submitBtn.disabled = true;
             
             try {
+                // Get IP address and details
+                const ip = await getUserIpAddress();
+                
                 const response = await fetch('https://9582anupam-portfolio-backend.vercel.app/api/v1/users/putMessage', {
                     method: 'POST',
                     headers: {
@@ -411,7 +414,8 @@ if (contactForm) {
                         name,
                         email,
                         subject,
-                        message
+                        message,
+                        ip,
                     })
                 });
                 
@@ -490,3 +494,15 @@ const currentYearEl = document.getElementById('currentYear');
 if (currentYearEl) {
     currentYearEl.textContent = new Date().getFullYear();
 }
+
+// IP Address and Details Functions
+const getUserIpAddress = async () => {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch (error) {
+        console.error('Error fetching IP address:', error);
+        return null;
+    }
+};
