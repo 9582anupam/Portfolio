@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 // Middleware Setup
 const corsOptions = {
-    origin: ["http://172.20.80.1:5500", "https://scheme-seva-gov.vercel.app"], // Allow your frontend domain and others
+    origin: ["http://172.20.80.1:5500", "https://9582anupam-portfolio.netlify.app"], // Allow your frontend domain and others
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Enable cookies in requests and responses
