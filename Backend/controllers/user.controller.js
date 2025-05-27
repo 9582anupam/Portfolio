@@ -46,11 +46,10 @@ export const getIpDetails = async (ip) => {
 };
 
 // add a new message
-const putMessage = async (req, res) => {
-    try {
+const putMessage = async (req, res) => {    try {
         const { name, email, subject, message, ip } = req.body;
         const now = new Date();
-        const dateTime = now.toLocaleString(); // Local date and time
+        const dateTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }); // IST timezone
         // const ip = await getUserIpAddress();
         const ipDet = await getIpDetails(ip);
         console.log("ipDet here", ipDet);
@@ -91,11 +90,10 @@ const newUser = async (req, res) => {
                 isExisting: true,
             });
         }
-        
-        // If IP doesn't exist, create new user
+          // If IP doesn't exist, create new user
         const ipDet = await getIpDetails(ip);
         const now = new Date();
-        const dateTime = now.toLocaleString(); // Local date and time
+        const dateTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }); // IST date and time
         const user = new User({ipDet, dateTime, ip});
         await user.save();
 
