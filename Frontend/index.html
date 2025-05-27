@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anupam's Portfolio | 8x Hackathon Winner</title>
+    <meta name="description" content="Portfolio of Anupam - 8x Hackathon Winner & 4x Hackathon Finalist">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for better icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Anupam<span class="highlight">.</span></a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-greeting">Hello, I'm</div>
+                    <h1 class="hero-name"><span class="highlight">Anupam</span></h1>
+                    <div class="hero-title-wrapper">
+                        <h2 class="hero-title"></h2>
+                    </div>
+                    <div class="hero-achievements">
+                        <div class="badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>8x Hackathon Winner</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-medal"></i>
+                            <span>4x Hackathon Finalist</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-medal"></i>
+                            <span>15+ Hackathon Participations</span>
+                        </div>
+                    </div>
+                    <p class="hero-description">Turning innovative ideas into exceptional digital experiences.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn secondary-btn">
+                            <span>Contact Me</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/9582anupam/" target="_blank" class="btn linkedin-btn">
+                            <span>LinkedIn</span>
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="pp2.jpg" alt="Anupam - Full Stack Developer">
+                        <div class="image-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Recent Work</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <!-- <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+            </div> -->
+            <div class="project-grid">
+                <!-- Project 1 - AxionAI -->
+                <div class="project-card" data-category="web" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="asset/axion.png" alt="AxionAI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://axion-ai-frontend.vercel.app/" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="https://github.com/9582anupam" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AxionAI</h3>
+                        <p>AI-powered learning platform with web app and Chrome extension. Transforms YouTube videos, PDFs, MP3s into interactive learning tools with AI summaries, flashcards, quizzes, and multilingual support. Features distraction-blocking and real-time assessments. Built with MERN stack and integrated with OpenAI API for intelligent content processing.</p>
+                        <div class="project-tags">
+                            <span>MERN</span>
+                            <span>Generative AI</span>
+                            <span>Tailwind CSS</span>
+                            <span>JWT</span>
+                            <span>WEB APP + Chrome Extension</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Sticky Note -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="asset/sticky-note.png" alt="Sticky Note">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="https://github.com/9582anupam" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sticky Note</h3>
+                        <p>Interactive note-taking application with drag-and-drop functionality, resizable notes, and real-time synchronization. Features secure Firebase authentication, advanced filtering, color coding, and cloud storage for enhanced productivity. Supports collaborative editing and cross-device synchronization for seamless workflow management.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - BiteBox -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="asset/bite-box.png" alt="BiteBox">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="https://github.com/9582anupam" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>BiteBox</h3>
+                        <p>Scalable E-Commerce platform with real-time product data, advanced filtering, and responsive design. Features JWT authentication, user management, order tracking, payment integration, and admin dashboard for complete inventory control. Includes search functionality, product recommendations, and secure payment gateway integration.</p>
+                        <div class="project-tags">
+                            <span>MERN</span>
+                            <span>Tailwind CSS</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 - Scheme Seva -->
+                <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="asset/scheme seva.png" alt="Scheme Seva">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://scheme-seva-gov.vercel.app/" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="https://github.com/9582anupam" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Scheme Seva</h3>
+                        <p>Government schemes discovery platform with AI-powered multilingual chatbot. Features advanced demographic filtering, user profiles, scheme bookmarking, and personalized recommendations for accessing welfare programs across India. Includes real-time updates on scheme eligibility and application status tracking with notification system.</p>
+                        <div class="project-tags">
+                            <span>MERN</span>
+                            <span>Tailwind CSS</span>
+                            <span>JWT</span>
+                            <span>AI Chatbot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="https://github.com/9582anupam" target="_blank" class="btn primary-btn">
+                    <span>View All Projects</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Professional Journey</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>React JS Developer</h3>
+                            <span class="company"><i class="fas fa-building"></i>VidyaInterna Hub.</span>
+                        </div>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Dec 2024 - Mar 2025</span>
+                        <ul class="timeline-details">
+                            <li>I was assigned to work on a web-based application as a React.js Developer intern.</li>
+                            <li>I contributed to building the frontend using React.js and TypeScript, implemented several UI components, and also assisted in backend development and UI/UX design research.</li>
+                            <li>Integrated REST APIs to dynamically fetch and display user data such as mentor availability, session schedules, and chat history.</li>
+                            <li>I was involved in researching and finalizing UI/UX designs, ensuring a user-friendly and visually consistent interface.</li>
+                            <li>Responsive and interactive user interface, Integration with backend APIs, Dynamic component rendering.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>Postman</span>
+                            <span>Tailwind CSS</span>
+                            <span>Git/Github</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Frontend Developer</h3>
+                            <span class="company"><i class="fas fa-building"></i> Delhi Skill and Entrepreneurship University.</span>
+                        </div>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Aug - Nov 2024</span>
+                        <ul class="timeline-details">
+                            <li>Developed and improved frontend features for the university's ERP system, enhancing student and admin user experience using React.js and Tailwind CSS.</li>
+                            <li>Collaborated with a cross-functional team to implement responsive UI components and ensure consistent design across all pages.</li>
+                            <li>Actively participated in debugging and testing, ensuring clean code practices and bug-free deployment.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Joint Secretary (COPS)</h3>
+                            <span class="company"><i class="fas fa-building"></i> Club of Programmers</span>
+                        </div>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Jun 2024 - Present</span>
+                        <ul class="timeline-details">
+                            <li>Assist in planning and organizing coding competitions, workshops, and tech talks to engage and upskill members.</li>
+                            <li>Act as a bridge between core team members and students to ensure smooth execution of club activities.</li>
+                            <li>Help introduce coding challenges, mentorship sessions, and collaborative projects to promote peer learning.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Mentorship</span>
+                            <span>Contest</span>
+                            <span>C/C++</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Recognition & Awards</span>
+                <h2 class="section-title">Achievements</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-wrapper">
+                <div class="achievements-stats">
+                    <div class="stat-item" data-aos="zoom-in">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-title">Hackathon Wins</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-number" data-count="4">0</div>
+                        <div class="stat-title">Hackathon Finals</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-title">Projects</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-number" data-count="1">0</div>
+                        <div class="stat-title">Year Intership Experience</div>
+                    </div>
+                </div>
+                <div class="achievement-list">
+                    <div class="achievement-item" data-aos="fade-right">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>IIIT-Delhi E-Submit</h3>
+                            <p>First place at the National Level Hackathon for an AI-powered solution that revolutionized Education accessibility.</p>
+                            <span class="achievement-date">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>DTU Code with DCG</h3>
+                            <p>First place at the National Level Hackathon for an AI-powered solution that revolutionized Government Schemes accessibility.</p>
+                            <span class="achievement-date">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>SRM Builds 6.0</h3>
+                            <p>First place at the National Level Hackathon for an AI-powered solution that revolutionized Mental Health & Emotions Improvement.</p>
+                            <span class="achievement-date">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What I'm Good At</span>
+                <h2 class="section-title">Skills</h2>
+                <div class="section-line"></div>
+            </div
+            
+            <!-- New Skills Layout -->
+            <div class="skills-grid">
+                <!-- Technologies Section -->
+                <div class="skills-box" data-aos="fade-up">
+                    <div class="skills-box-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Technologies</h3>
+                    </div>
+                    <div class="skills-box-content">
+                        <div class="skill-tag"><i class="fab fa-react"></i> React</div>
+                        <div class="skill-tag"><i class="fas fa-database"></i> MongoDB</div>
+                        <div class="skill-tag"><i class="fab fa-node-js"></i> Express</div>
+                        <div class="skill-tag"><i class="fab fa-node"></i> Node.js</div>
+                        <div class="skill-tag"><i class="fas fa-fire"></i> Firebase</div>
+                        <div class="skill-tag"><i class="fas fa-cloud"></i> Cloudinary</div>
+                        <div class="skill-tag"><i class="fas fa-robot"></i> Generative AI</div>
+                        <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="skill-tag"><i class="fa-brands fa-css3"></i>Tailwind</div>
+                    </div>
+                </div>
+                
+                <!-- Tools Section -->
+                <div class="skills-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skills-box-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skills-box-content">
+                        <div class="skill-tag"><i class="fas fa-server"></i> Vercel</div>
+                        <div class="skill-tag"><i class="fas fa-paper-plane"></i> Postman</div>
+                        <div class="skill-tag"><i class="fas fa-bolt"></i> ThunderClient</div>
+                        <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
+                        <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
+                    </div>
+                </div>
+                
+                <!-- Frontend Skills -->
+                <!-- <div class="skills-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skills-box-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Backend Skills -->
+                <!-- <div class="skills-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skills-box-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Express</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h3>Email</h3>
+                            <p>9582anupamk@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h3>Location</h3>
+                            <p>New Delhi, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h3>Phone</h3>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/9582anupam" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/9582anupam/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/Pankaj000abc" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://devfolio.co/@9582anupam" class="social-link" aria-label="Instagram"><i class="fa-solid fa-d"></i></a>
+                    </div>
+                </div>
+                <div class="contact-container" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <div class="input-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-heading"></i>
+                                </div>
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <div class="input-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-comment-alt"></i>
+                                </div>
+                                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn primary-btn" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank you!</h3>
+                        <p>Your message has been sent successfully.</p>
+                        <button class="btn secondary-btn" id="sendAnother">Send Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#" class="logo">Anupam<span class="highlight">.</span></a>
+                        <p>8x Hackathon Winner & 4x Hackathon Finalist</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#achievements">Achievements</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h3>Stay Updated</h3>
+                        <p>Subscribe to my newsletter for the latest updates</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" placeholder="Your email">
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear">2025</span> Anupam. All Rights Reserved.</p>
+                <div class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
