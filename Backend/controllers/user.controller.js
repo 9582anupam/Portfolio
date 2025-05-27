@@ -34,7 +34,7 @@ const putMessage = async (req, res) => {
         const dateTime = now.toLocaleString(); // Local date and time
         const ip = await getUserIpAddress();
         const ipDet = await getIpDetails(ip);
-        const data = new User({ name, email, subject, message, dateTime, ip });
+        const data = new User({ name, email, subject, message, dateTime, ip, ipDet });
         await data.save();
         await sendEmail(name, email, subject, message, ipDet);
         res.status(200).json({
