@@ -18,7 +18,7 @@ import Message from "../models/message.model.js";
 
 export const getIpDetails = async (ip) => {
     try {
-        const ipKey = process.env.IP_Key;
+        const ipKey = process.env.IP_KEY;
         const response = await axios.get(`https://api.ip2location.io/?key=${ipKey}&ip=${ip}`);
         
         // Manually create object from response.data with only specified fields
