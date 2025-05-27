@@ -3,6 +3,7 @@ import { generateAccessAndRefreshToken } from "../helper/generateAccessAndRefres
 import jwt from "jsonwebtoken";
 import { sendEmail } from "../services/email.js";
 import axios from 'axios';
+import Message from "../models/message.model.js";
 
 // export const getUserIpAddress = async () => {
 //     try {
@@ -35,7 +36,7 @@ const putMessage = async (req, res) => {
         const dateTime = now.toLocaleString(); // Local date and time
         // const ip = await getUserIpAddress();
         const ipDet = await getIpDetails(ip);
-        const data = new User({ name, email, subject, message, dateTime, ip, ipDet });
+        const data = new Message({ name, email, subject, message, dateTime, ip, ipDet });
         await data.save();
         await sendEmail(name, email, subject, message, ipDet);
         res.status(200).json({
@@ -55,6 +56,51 @@ const putMessage = async (req, res) => {
     }
 };
 
+
+const newUser = async (req, res) => {
+
+    try {
+        const { ip } = req.body;
+        
+        // Check if user with this IP already exists
+        const existingUser = await User.findOne({ ip: ip });
+        
+        if (existingUser) {
+            return res.status(200).json({
+                message: "user already exists with this IP",
+                success: true,
+                status: 200,
+                isExisting: true,
+            });
+        }
+        
+        // If IP doesn't exist, create new user
+        const ipDet = await getIpDetails(ip);
+        const now = new Date();
+        const dateTime = now.toLocaleString(); // Local date and time
+        const user = new User({ipDet, dateTime, ip});
+        await user.save();
+
+        res.status(200).json({
+            message: "user stored successfully",
+            success: true,
+            status: 200,
+            isExisting: false,
+        });
+        
+    } catch (error) {
+        console.log("error in newUser: ", error);
+        res.status(500).json({
+            message: "error occured while adding new user details",
+            error,
+            status: 500,
+            success: false,
+        })
+    }
+};
+
+
 export {
-    putMessage
+    putMessage,
+    newUser
 };

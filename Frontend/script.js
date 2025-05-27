@@ -506,3 +506,35 @@ const getUserIpAddress = async () => {
         return null;
     }
 };
+
+// Track new user visit on page load
+const trackNewUser = async () => {
+    try {
+        const ip = await getUserIpAddress();
+        if (ip) {
+            const response = await fetch('https://9582anupam-portfolio-backend.vercel.app/api/v1/users/newUser', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ip })
+            });
+            
+            const data = await response.json();
+            if (response.ok) {
+                if (data.isExisting) {
+                    console.log('Returning user detected');
+                } else {
+                    console.log('New user visit tracked successfully');
+                }
+            } else {
+                console.error('Failed to track user visit:', data.message);
+            }
+        }
+    } catch (error) {
+        console.error('Error tracking user visit:', error);
+    }
+};
+
+// Call trackNewUser when page loads
+document.addEventListener('DOMContentLoaded', trackNewUser);
