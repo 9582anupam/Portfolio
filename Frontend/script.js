@@ -402,7 +402,7 @@ if (contactForm) {
             submitBtn.disabled = true;
             
             try {
-                const response = await fetch('9582anupam-portfolio-backend.vercel.app/api/v1/users/putMessage', {
+                const response = await fetch('https://9582anupam-portfolio-backend.vercel.app/api/v1/users/putMessage', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
