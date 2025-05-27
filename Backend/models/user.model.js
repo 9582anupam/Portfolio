@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema(
             type: String,
         },
         ipDet: {
-            type: JSON
+            type: Object
         }
     },
 
