@@ -494,7 +494,7 @@ if (currentYearEl) {
 // Track new user visit on page load
 const trackNewUser = async () => {
     try {
-        const response = await fetch('http://localhost:5000/api/v1/users/newUser', {
+        const response = await fetch('https://9582anupam-portfolio-backend.vercel.app/api/v1/users/newUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
