@@ -57,17 +57,17 @@ export const sendEmail = async (name, email, subject, message, ipDet) => {
                 <p><strong>Message:</strong> ${message}</p>
 
                 <h4>Visitor Info</h4>
-                <p><strong>IP Address:</strong> ${ipDet.query}</p>
-                <p><strong>Country:</strong> ${ipDet.country} (${ipDet.countryCode})</p>
-                <p><strong>Region:</strong> ${ipDet.regionName} (${ipDet.region})</p>
-                <p><strong>City:</strong> ${ipDet.city}</p>
-                <p><strong>ZIP Code:</strong> ${ipDet.zip}</p>
-                <p><strong>Latitude:</strong> ${ipDet.lat}</p>
-                <p><strong>Longitude:</strong> ${ipDet.lon}</p>
-                <p><strong>Timezone:</strong> ${ipDet.timezone}</p>
-                <p><strong>ISP:</strong> ${ipDet.isp}</p>
-                <p><strong>Organization:</strong> ${ipDet.org}</p>
-                <p><strong>AS:</strong> ${ipDet.as}</p>
+                <p><strong>IP Address:</strong> ${ipDet?.ip || 'Unknown'}</p>
+                <p><strong>Country:</strong> ${ipDet?.country_name || 'Unknown'} (${ipDet?.country_code || 'Unknown'})</p>
+                <p><strong>Region:</strong> ${ipDet?.region_name || 'Unknown'}</p>
+                <p><strong>City:</strong> ${ipDet?.city_name || 'Unknown'}</p>
+                <p><strong>ZIP Code:</strong> ${ipDet?.zip_code || 'Unknown'}</p>
+                <p><strong>Latitude:</strong> ${ipDet?.latitude || 'Unknown'}</p>
+                <p><strong>Longitude:</strong> ${ipDet?.longitude || 'Unknown'}</p>
+                <p><strong>Timezone:</strong> ${ipDet?.time_zone || 'Unknown'}</p>
+                <p><strong>ISP:</strong> ${ipDet?.as || 'Unknown'}</p>
+                <p><strong>Organization:</strong> ${ipDet?.as || 'Unknown'}</p>
+                <p><strong>AS:</strong> ${ipDet?.asn || 'Unknown'}</p>
             `
             ,
         });

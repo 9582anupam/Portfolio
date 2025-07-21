@@ -23,10 +23,10 @@ app.use(cookieParser());
 app.use(express.json()); // Parse JSON requests
 
 // Set browser identification for all routes - this happens first
-app.use(setBrowserIdentification);
+// app.use(setBrowserIdentification);
 
 // Apply API security for API routes only
-app.use("/api", secureApiMiddleware);
+// app.use("/api", secureApiMiddleware);
 
 // Declare API routes
 app.use("/api", apiRoutes); // Attach all API routes
