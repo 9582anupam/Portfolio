@@ -402,9 +402,6 @@ if (contactForm) {
             submitBtn.disabled = true;
             
             try {
-                // Get IP address and details
-                const ip = await getUserIpAddress();
-                
                 const response = await fetch('https://9582anupam-portfolio-backend.vercel.app/api/v1/users/putMessage', {
                     method: 'POST',
                     headers: {
@@ -415,7 +412,6 @@ if (contactForm) {
                         email,
                         subject,
                         message,
-                        ip,
                     })
                 });
                 
@@ -495,41 +491,26 @@ if (currentYearEl) {
     currentYearEl.textContent = new Date().getFullYear();
 }
 
-// IP Address and Details Functions
-const getUserIpAddress = async () => {
-    try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        return data.ip;
-    } catch (error) {
-        console.error('Error fetching IP address:', error);
-        return null;
-    }
-};
-
 // Track new user visit on page load
 const trackNewUser = async () => {
     try {
-        const ip = await getUserIpAddress();
-        if (ip) {
-            const response = await fetch('https://9582anupam-portfolio-backend.vercel.app/api/v1/users/newUser', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ ip })
-            });
-            
-            const data = await response.json();
-            if (response.ok) {
-                if (data.isExisting) {
-                    console.log('Returning user detected');
-                } else {
-                    console.log('New user visit tracked successfully');
-                }
+        const response = await fetch('http://localhost:5000/api/v1/users/newUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({})
+        });
+        
+        const data = await response.json();
+        if (response.ok) {
+            if (data.isExisting) {
+                console.log('Returning user detected');
             } else {
-                console.error('Failed to track user visit:', data.message);
+                console.log('New user visit tracked successfully');
             }
+        } else {
+            console.error('Failed to track user visit:', data.message);
         }
     } catch (error) {
         console.error('Error tracking user visit:', error);
