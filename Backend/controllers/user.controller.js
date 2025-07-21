@@ -46,11 +46,12 @@ export const getIpDetails = async (ip) => {
 };
 
 // add a new message
-const putMessage = async (req, res) => {    try {
-        const { name, email, subject, message, ip } = req.body;
+const putMessage = async (req, res) => {
+    try {
+        const { name, email, subject, message } = req.body;
         const now = new Date();
         const dateTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }); // IST timezone
-        // const ip = await getUserIpAddress();
+        const ip = req.ip || req.connection.remoteAddress || req.socket.remoteAddress || (req.connection.socket ? req.connection.socket.remoteAddress : null);
         const ipDet = await getIpDetails(ip);
         console.log("ipDet here", ipDet);
         const data = new Message({ name, email, subject, message, dateTime, ip, ipDet });
@@ -77,11 +78,11 @@ const putMessage = async (req, res) => {    try {
 const newUser = async (req, res) => {
 
     try {
-        const { ip } = req.body;
+        const ip = req.ip || req.connection.remoteAddress || req.socket.remoteAddress || (req.connection.socket ? req.connection.socket.remoteAddress : null);
         
         // Check if user with this IP already exists
         const existingUser = await User.findOne({ ip: ip });
-        
+        console.log("existingUser: ", existingUser);
         if (existingUser) {
             return res.status(200).json({
                 message: "user already exists with this IP",

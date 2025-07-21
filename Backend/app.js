@@ -7,6 +7,9 @@ import { secureApiMiddleware, setBrowserIdentification } from "./middlewares/sec
 const app = express();
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Trust proxy to get real IP addresses
+app.set('trust proxy', true);
+
 // Middleware Setup
 const corsOptions = {
     origin: ["http://172.20.80.1:5500", "https://9582anupam-portfolio.netlify.app", "https://9582anupam-portfolio.vercel.app"], // Allow your frontend domain and others
@@ -14,7 +17,7 @@ const corsOptions = {
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Enable cookies in requests and responses
 };
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.json()); // Parse JSON requests
